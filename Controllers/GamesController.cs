@@ -13,10 +13,12 @@ namespace RelationsNaN.Controllers
     public class GamesController : Controller
     {
         private readonly RelationsNaNContext _context;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public GamesController(RelationsNaNContext context)
+        public GamesController(RelationsNaNContext context, IWebHostEnvironment webHostEnvironment)
         {
             _context = context;
+            _webHostEnvironment = webHostEnvironment;
         }
 
         // GET: Games
